@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Kristine Barthe, praticienne en Travail Transgénérationnel | Castelsarrasin (82)</title>
+  <meta name="description" content="Kristine Barthe, praticienne diplômée de l'École Jade Colline en Travail Transgénérationnel Émotionnel et Comportemental à Castelsarrasin (82). Découvrez son parcours, ses valeurs et son cadre de pratique.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kristinebarthe.fr/a-propos.html">
+  <meta property="og:title" content="À propos — Kristine Barthe | Praticienne en Travail Transgénérationnel">
+  <meta property="og:description" content="Diplômée de l'École Jade Colline. Clarté, Douceur, Rigueur. Découvrez le parcours et les valeurs de Kristine Barthe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kristinebarthe.fr/a-propos.html">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <style>
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .about-hero-grid { grid-template-columns: 1fr; }
+      .about-hero-photo { max-width: 420px; margin: 0 auto; }
+    }
+    .about-hero-photo {
+      position: relative;
+    }
+    .about-hero-photo img {
+      width: 100%;
+      border-radius: 1.25rem;
+      display: block;
+    }
+    .about-hero-photo .photo-badge {
+      position: absolute;
+      bottom: -1.25rem;
+      left: 1.5rem;
+      background: var(--violet-deep);
+      color: #fff;
+      border-radius: .875rem;
+      padding: 1rem 1.5rem;
+    }
+    .about-hero-photo .photo-badge .badge-label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.65);
+      margin-bottom: .2rem;
+    }
+    .about-hero-photo .photo-badge .badge-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .about-intro {
+      padding-top: .5rem;
+    }
+    .about-intro .eyebrow { display: block; margin-bottom: .75rem; }
+    .about-intro h2 {
+      font-size: 2.25rem;
+      color: var(--violet-deep);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+    .about-intro p {
+      color: var(--text-mid);
+      line-height: 1.9;
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+    }
+    .formation-block {
+      background: var(--lavande);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .formation-icon { font-size: 2rem; flex-shrink: 0; margin-top: .2rem; }
+    .formation-text .label {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--violet-mid);
+      font-weight: 600;
+      margin-bottom: .3rem;
+    }
+    .formation-text .value {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--violet-deep);
+      margin-bottom: .2rem;
+    }
+    .formation-text .sub {
+      font-size: .88rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    @media (max-width: 768px) {
+      .valeurs-grid { grid-template-columns: 1fr; }
+    }
+    .valeur-card {
+      text-align: center;
+      padding: 2.5rem 1.75rem;
+      border-radius: 1.25rem;
+      background: #fff;
+      border: 1.5px solid var(--lavande);
+      transition: box-shadow .25s;
+    }
+    .valeur-card:hover {
+      box-shadow: 0 12px 36px rgba(107, 72, 200, .1);
+    }
+    .valeur-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .valeur-card h3 {
+      color: var(--violet-deep);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .valeur-card p {
+      color: var(--text-mid);
+      font-size: .94rem;
+      line-height: 1.8;
+      margin-bottom: .65rem;
+    }
+    .valeur-card p:last-child { margin-bottom: 0; }
+    .cadre-block {
+      background: var(--lavande);
+      border-radius: 1.25rem;
+      padding: 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .cadre-block h3 {
+      color: var(--violet-deep);
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .cadre-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 640px) { .cadre-items { grid-template-columns: 1fr; } }
+    .cadre-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .cadre-item-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--violet-mid);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .cadre-item-text h4 {
+      color: var(--violet-deep);
+      font-size: .95rem;
+      margin-bottom: .3rem;
+    }
+    .cadre-item-text p {
+      color: var(--text-mid);
+      font-size: .88rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .non-medical-note {
+      font-size: .86rem;
+      color: var(--text-light);
+      border-top: 1px solid rgba(107, 72, 200, .15);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Kristine Barthe — Accueil">
+      <img src="assets/images/logo-kristine.png" alt="Kristine Barthe — Travail Transgénérationnel" class="logo__img" width="60" height="60">
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="pratique.html">La pratique</a>
+      <a href="pour-qui.html">Pour qui</a>
+      <a href="seances.html">Séances</a>
+      <a href="faq.html">FAQ</a>
+      <a href="a-propos.html" aria-current="page">À propos</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="tarifs.html" class="header-cta">Prendre rendez-vous</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <span class="eyebrow">La praticienne</span>
+    <h1 id="page-title">À propos de Kristine Barthe</h1>
+    <p class="page-hero__lead">Praticienne diplômée de l'École Jade Colline. Castelsarrasin (82) et visioconférence pour toute la France.</p>
+  </div>
+</section>
+
+<!-- ── PRÉSENTATION ── -->
+<section class="section" aria-labelledby="presentation-title">
+  <div class="container">
+    <div class="about-hero-grid">
+      <div class="about-intro">
+        <span class="eyebrow">En première personne</span>
+        <h2 id="presentation-title">Ce qui m'a conduite à ce travail</h2>
+        <p>Ce qui m'a amenée à me former au Travail Transgénérationnel Émotionnel et Comportemental, c'est d'abord ma propre expérience. Longtemps, j'ai ressenti des choses que je ne savais pas nommer — des réactions émotionnelles qui me semblaient disproportionnées, des façons d'être dans mes relations qui revenaient malgré ma volonté de faire autrement. J'avais l'impression de porter quelque chose qui ne venait pas entièrement de moi.</p>
+        <p>Quand j'ai découvert cette approche et que j'ai commencé à explorer mon propre arbre émotionnel, quelque chose s'est éclairé. Non pas d'un coup, comme une révélation, mais progressivement — comme quand on allume les lumières dans une pièce que l'on habitait dans le noir depuis longtemps. J'ai compris que certaines de mes difficultés avaient une histoire, une logique, une origine qui me précédait.</p>
+        <p>C'est cette conviction — que comprendre l'origine de nos schémas, c'est se donner la possibilité de les choisir plutôt que de les subir — qui m'a conduite à me former, puis à exercer. J'accompagne aujourd'hui des personnes qui vivent quelque chose de semblable à ce que j'ai moi-même traversé, avec le même soin que j'aurais voulu trouver à l'époque.</p>
+        <div class="formation-block">
+          <div class="formation-icon">🎓</div>
+          <div class="formation-text">
+            <div class="label">Formation</div>
+            <div class="value">Diplômée École Jade Colline</div>
+            <div class="sub">Travail Transgénérationnel Émotionnel et Comportemental<br>Supervisée régulièrement — cadre déontologique strict</div>
+          </div>
+          <a href="assets/images/diplome-jade-colline.jpg" target="_blank" rel="noopener" style="display:block;margin-top:1rem;">
+            <img src="assets/images/diplome-jade-colline.jpg"
+                 alt="Diplôme de l'École Jade Colline — Kristine Barthe"
+                 style="width:120px;height:auto;border-radius:var(--radius-sm);border:2px solid var(--lavande-mid);box-shadow:var(--shadow-sm);cursor:pointer;"
+                 title="Cliquer pour agrandir le diplôme">
+            <span style="display:block;font-size:.75rem;color:var(--text-light);margin-top:.3rem;text-align:center;">Voir le diplôme</span>
+          </a>
+        </div>
+      </div>
+      <div class="about-hero-photo">
+        <img src="assets/images/photo-kristine.jpg"
+             alt="Portrait de Kristine Barthe, praticienne en Travail Transgénérationnel à Castelsarrasin"
+             width="600" height="700" loading="eager"
+             style="width:100%;border-radius:var(--radius-xl);object-fit:cover;height:500px;">
+        <!-- 📷 Remplacer photo-kristine.jpg par la vraie photo de Kristine (600×700px min) -->
+        <div class="photo-badge">
+          <div class="badge-label">Diplômée</div>
+          <div class="badge-value">École Jade Colline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALEURS ── -->
+<section class="section section--light" aria-labelledby="valeurs-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Ce qui guide ma pratique</span>
+      <h2 id="valeurs-title">Mes trois valeurs fondamentales</h2>
+      <p>Ces valeurs ne sont pas des mots sur un mur. Ce sont les principes qui orientent chaque séance, chaque accompagnement.</p>
+    </div>
+    <div class="valeurs-grid">
+      <div class="valeur-card">
+        <span class="valeur-icon">💡</span>
+        <h3>Clarté</h3>
+        <p>Je crois que les personnes que j'accompagne méritent de comprendre ce qu'elles font et pourquoi. Je n'utilise pas de jargon obscur ni de promesses vagues.</p>
+        <p>Je pose un cadre transparent dès le début : ce que ce travail est, ce qu'il n'est pas, ce qu'on peut en attendre raisonnablement.</p>
+        <p>La clarté, c'est aussi la capacité à dire quand quelque chose dépasse mon cadre — et à orienter vers un professionnel plus adapté si nécessaire.</p>
+      </div>
+      <div class="valeur-card">
+        <span class="valeur-icon">🌿</span>
+        <h3>Douceur</h3>
+        <p>Explorer son histoire familiale peut faire remonter des choses difficiles. Ce travail se fait à votre rythme, sans forcer, sans brusquer.</p>
+        <p>La douceur ne signifie pas l'absence de profondeur — au contraire. Un espace sécurisant permet d'aller là où les espaces brusques ne peuvent pas aller.</p>
+        <p>Je veille à ce que chaque séance soit un endroit où vous pouvez être ce que vous êtes, sans avoir à vous défendre ni à vous justifier.</p>
+      </div>
+      <div class="valeur-card">
+        <span class="valeur-icon">🧭</span>
+        <h3>Rigueur</h3>
+        <p>Je travaille dans le cadre de la méthode Jade Colline, avec une supervision régulière. La rigueur, c'est aussi respecter les limites de ma pratique.</p>
+        <p>Ce travail n'est pas une thérapie, pas une médecine. Il a un cadre précis et je le respecte scrupuleusement — pour votre sécurité et pour l'intégrité de l'accompagnement.</p>
+        <p>La rigueur est une forme de respect envers les personnes que j'accompagne et envers la discipline que j'exerce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CADRE DE PRATIQUE ── -->
+<section class="section" aria-labelledby="cadre-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Transparence et éthique</span>
+      <h2 id="cadre-title">Mon cadre de pratique</h2>
+      <p>Pour que vous choisissiez cet accompagnement en toute confiance et en toute connaissance de cause.</p>
+    </div>
+    <div class="cadre-block">
+      <h3>Comment j'exerce</h3>
+      <div class="cadre-items">
+        <div class="cadre-item">
+          <div class="cadre-item-icon">🔒</div>
+          <div class="cadre-item-text">
+            <h4>Confidentialité totale</h4>
+            <p>Tout ce qui est dit en séance reste strictement confidentiel. Aucune information n'est transmise à des tiers sans votre accord explicite.</p>
+          </div>
+        </div>
+        <div class="cadre-item">
+          <div class="cadre-item-icon">🧭</div>
+          <div class="cadre-item-text">
+            <h4>Supervision régulière</h4>
+            <p>Je bénéficie d'une supervision professionnelle régulière, comme le préconise l'École Jade Colline. C'est une garantie de qualité pour ma pratique.</p>
+          </div>
+        </div>
+        <div class="cadre-item">
+          <div class="cadre-item-icon">📋</div>
+          <div class="cadre-item-text">
+            <h4>Cadre déontologique clair</h4>
+            <p>J'exerce dans le respect du cadre déontologique de l'École Jade Colline — sans promesses de résultats, sans manipulation, sans jugement.</p>
+          </div>
+        </div>
+        <div class="cadre-item">
+          <div class="cadre-item-icon">🤝</div>
+          <div class="cadre-item-text">
+            <h4>Liberté à chaque étape</h4>
+            <p>Vous êtes libre d'arrêter à tout moment, sans justification. Le rythme des séances est entièrement à votre main.</p>
+          </div>
+        </div>
+        <div class="cadre-item">
+          <div class="cadre-item-icon">🌐</div>
+          <div class="cadre-item-text">
+            <h4>Présentiel et visio</h4>
+            <p>Présentiel à Castelsarrasin (82) pour les personnes du Tarn-et-Garonne, visioconférence pour toute la France et les francophones à l'étranger.</p>
+          </div>
+        </div>
+        <div class="cadre-item">
+          <div class="cadre-item-icon">🔄</div>
+          <div class="cadre-item-text">
+            <h4>Orientation si nécessaire</h4>
+            <p>Si votre situation dépasse le cadre de cet accompagnement, je vous oriente vers un professionnel de santé adapté — sans hésitation.</p>
+          </div>
+        </div>
+      </div>
+      <p class="non-medical-note">
+        <strong>Rappel important :</strong> Kristine Barthe n'est pas psychologue, psychothérapeute ni médecin. Ce travail est un accompagnement personnel et ne constitue pas un acte de soin au sens médical ou réglementaire du terme. Il ne remplace pas un suivi médical ou psychologique. En cas de détresse psychologique importante, consultez un professionnel de santé agréé.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="section section--violet cta-section">
+  <div class="container">
+    <h2>Envie d'en savoir plus ou de fixer un premier rendez-vous ?</h2>
+    <p>Premier rendez-vous sans engagement. Présentiel à Castelsarrasin ou visio pour toute la France.</p>
+    <a href="tarifs.html" class="btn btn--white">Voir les tarifs et prendre rendez-vous</a>
+    <p class="cta-micro">70€ la séance de 1h30 — Annulation remboursée si prévenue plus de 48h à l'avance</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo__name" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;">Kristine Barthe</span>
+        <div class="logo__sub" style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;">Travail Transgénérationnel Émotionnel et Comportemental</div>
+        <p>Praticienne diplômée de l'École Jade Colline. Accompagnement en présentiel à Castelsarrasin (82) et en visioconférence pour toute la France.</p>
+        <div class="footer-social" style="margin-top:1.25rem;">
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="pratique.html">La pratique</a></li>
+          <li><a href="pour-qui.html">Pour qui</a></li>
+          <li><a href="seances.html">Déroulement</a></li>
+          <li><a href="tarifs.html">Tarifs & RDV</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="faq.html">FAQ complète</a></li>
+          <li><a href="blog/index.html">Blog & Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="cgv.html">CGV</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+        <div style="margin-top:1.5rem;font-size:.82rem;line-height:1.7;">
+          <div>📍 Castelsarrasin (82)</div>
+          <div>📞 07 80 17 64 03</div>
+          <div>✉ kriss.barthe1560@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kristine Barthe. Tous droits réservés.</span>
+      <span>Réalisation <a href="https://www.c2fa.fr" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)">CCFA</a> — SIRET&nbsp;94386198900011</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── COOKIE BANNER ── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-inner">
+    <p clas

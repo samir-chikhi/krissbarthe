@@ -1,0 +1,16 @@
+# ── Gros fichiers images non optimisés (sources PDF converties)
+assets/images/arbre-local.png
+assets/images/diplome-jade-colline.png
+assets/images/arbre-genealogique.png
+assets/images/plaquettes_preview.png
+
+# ── Fichiers système
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# ── Fichiers de travail
+*.odt
+*.docx
+*.pdf

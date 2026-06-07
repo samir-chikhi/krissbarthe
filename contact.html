@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Poser une question à Kristine Barthe | Castelsarrasin (82)</title>
+  <meta name="description" content="Contactez Kristine Barthe, praticienne en Travail Transgénérationnel Émotionnel et Comportemental à Castelsarrasin (82). Formulaire, téléphone, email. Premier RDV sans engagement.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kristinebarthe.fr/contact.html">
+  <meta property="og:title" content="Contact | Kristine Barthe — Travail Transgénérationnel">
+  <meta property="og:description" content="Posez une question ou prenez rendez-vous avec Kristine Barthe, praticienne à Castelsarrasin (82) et en visioconférence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kristinebarthe.fr/contact.html">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    .contact-form-block h2 {
+      font-size: 1.75rem;
+      color: var(--violet-deep);
+      margin-bottom: .75rem;
+    }
+    .contact-form-block .form-intro {
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--violet-deep);
+      margin-bottom: .5rem;
+      letter-spacing: .02em;
+    }
+    .form-group label .required {
+      color: var(--violet-mid);
+      margin-left: .2rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      border: 1.5px solid #e0d8f5;
+      border-radius: .625rem;
+      padding: .85rem 1.1rem;
+      font-size: .97rem;
+      color: var(--text-dark);
+      background: #fff;
+      transition: border-color .2s, box-shadow .2s;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--violet-mid);
+      box-shadow: 0 0 0 3px rgba(107, 72, 200, .12);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 160px;
+    }
+    .form-honeypot { display: none; }
+    .form-submit {
+      width: 100%;
+      padding: 1.1rem;
+      background: var(--violet-mid);
+      color: #fff;
+      border: none;
+      border-radius: .75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+      letter-spacing: .02em;
+    }
+    .form-submit:hover {
+      background: var(--violet-deep);
+      transform: translateY(-1px);
+    }
+    .form-submit:active { transform: translateY(0); }
+    .rgpd-note {
+      font-size: .8rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: var(--lavande);
+      border-radius: .625rem;
+    }
+    .rgpd-note a { color: var(--violet-mid); }
+    .contact-info-block {
+      position: sticky;
+      top: 6rem;
+    }
+    .contact-info-card {
+      background: var(--violet-deep);
+      border-radius: 1.25rem;
+      padding: 2.5rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .contact-info-card h3 {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .contact-info-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-info-item-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .contact-info-item-text .ci-label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.55);
+      margin-bottom: .25rem;
+    }
+    .contact-info-item-text .ci-value {
+      font-size: .97rem;
+      color: #fff;
+      font-weight: 500;
+    }
+    .contact-info-item-text .ci-value a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .contact-info-item-text .ci-value a:hover {
+      text-decoration: underline;
+    }
+    .contact-rdv-card {
+      background: var(--lavande);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      border: 1.5px solid var(--violet-mid);
+      text-align: center;
+    }
+    .contact-rdv-card h3 {
+      color: var(--violet-deep);
+      margin-bottom: .75rem;
+      font-size: 1.1rem;
+    }
+    .contact-rdv-card p {
+      color: var(--text-mid);
+      font-size: .92rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .contact-rdv-card .price-pill {
+      display: inline-block;
+      background: var(--violet-deep);
+      color: #fff;
+      border-radius: 2rem;
+      padding: .4rem 1.25rem;
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+    .form-success {
+      display: none;
+      background: #f0fbf4;
+      border: 1.5px solid #a8e6bc;
+      border-radius: .875rem;
+      padding: 2rem;
+      text-align: center;
+      color: #1a6b3a;
+    }
+    .form-success h3 { color: #1a6b3a; margin-bottom: .5rem; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Kristine Barthe — Accueil">
+      <img src="assets/images/logo-kristine.png" alt="Kristine Barthe — Travail Transgénérationnel" class="logo__img" width="60" height="60">
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="pratique.html">La pratique</a>
+      <a href="pour-qui.html">Pour qui</a>
+      <a href="seances.html">Séances</a>
+      <a href="faq.html">FAQ</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="tarifs.html" class="header-cta">Prendre rendez-vous</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <span class="eyebrow">Une question ? Un doute ?</span>
+    <h1 id="page-title">Poser une question à Kristine Barthe</h1>
+    <p class="page-hero__lead">Vous pouvez écrire, appeler ou simplement prendre rendez-vous directement. Il n'y a pas de bonne façon de commencer.</p>
+  </div>
+</section>
+
+<!-- ── FORMULAIRE + INFOS ── -->
+<section class="section" aria-labelledby="contact-form-title">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form-block">
+        <h2 id="contact-form-title">Écrire à Kristine</h2>
+        <p class="form-intro">Ce formulaire vous permet de poser une question, de demander des informations sur la pratique ou d'exprimer une demande d'accompagnement. Kristine répond personnellement dans les 48h ouvrées.</p>
+
+        <form id="contact-form" novalidate>
+
+          <div class="form-group">
+            <label for="prenom">Prénom <span class="required" aria-label="champ obligatoire">*</span></label>
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              placeholder="Votre prénom"
+              required
+              autocomplete="given-name"
+              aria-required="true"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adresse email <span class="required" aria-label="champ obligatoire">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="votre@email.fr"
+              required
+              autocomplete="email"
+              aria-required="true"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="sujet">Sujet de votre message</label>
+            <select id="sujet" name="sujet">
+              <option value="">— Choisir (optionnel) —</option>
+              <option value="Demande d'information sur la pratique">Demande d'information sur la pratique</option>
+              <option value="Prise de rendez-vous">Prise de rendez-vous</option>
+              <option value="Question sur les séances en visioconférence">Question visioconférence</option>
+              <option value="Question sur le tarif">Question sur le tarif</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre message <span class="required" aria-label="champ obligatoire">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Écrivez librement. Il n'y a pas de bonne ou de mauvaise façon de formuler votre demande."
+              required
+              aria-required="true"
+              rows="7"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Envoyer mon message →</button>
+          <p style="font-size:.78rem;color:var(--text-light);margin-top:.75rem;">
+            Ce bouton ouvre votre application de messagerie (Outlook, Mail, Gmail…) avec votre message pré-rempli, prêt à envoyer directement à Kristine.
+          </p>
+        </form>
+
+        <div class="form-success" id="form-success" role="status" aria-live="polite" style="display:none;background:var(--green-bg);border-radius:var(--radius-md);padding:1.5rem;margin-top:1rem;">
+          <h3 style="color:var(--green-ok);">Votre messagerie s'est ouverte ✓</h3>
+          <p>Il ne vous reste plus qu'à envoyer l'email depuis votre messagerie. Si rien ne s'est ouvert, écrivez directement à <a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a></p>
+        </div>
+
+        <div class="rgpd-note" role="note">
+          <strong>Données personnelles :</strong> Les informations saisies dans ce formulaire sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers, ni utilisées à des fins commerciales. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez : <a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a>. Pour en savoir plus, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.
+        </div>
+      </div>
+
+      <!-- INFOS CONTACT -->
+      <aside class="contact-info-block" aria-label="Coordonnées">
+        <div class="contact-info-card">
+          <h3>Coordonnées</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-item-icon">📞</div>
+            <div class="contact-info-item-text">
+              <div class="ci-label">Téléphone</div>
+              <div class="ci-value"><a href="tel:+33780176403">07 80 17 64 03</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item-icon">✉</div>
+            <div class="contact-info-item-text">
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item-icon">📍</div>
+            <div class="contact-info-item-text">
+              <div class="ci-label">Lieu</div>
+              <div class="ci-value">Castelsarrasin (82)<br>Tarn-et-Garonne</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item-icon">💻</div>
+            <div class="contact-info-item-text">
+              <div class="ci-label">Visioconférence</div>
+              <div class="ci-value">Toute la France<br>Lien simple par email</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item-icon">🕐</div>
+            <div class="contact-info-item-text">
+              <div class="ci-label">Délai de réponse</div>
+              <div class="ci-value">48h ouvrées</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-rdv-card">
+          <h3>Prêt à prendre rendez-vous ?</h3>
+          <p>Pas besoin de poser une question d'abord. Vous pouvez directement aller sur la page tarifs pour réserver votre première séance.</p>
+          <div class="price-pill">70€ / 1h30</div>
+          <a href="tarifs.html" class="btn btn--primary" style="width: 100%; justify-content: center; display: flex;">Voir les tarifs et réserver</a>
+          <p style="font-size: .78rem; color: var(--text-light); margin-top: 1rem; margin-bottom: 0; line-height: 1.6;">Premier RDV sans engagement · Annulation remboursée &gt; 48h</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo__name" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;">Kristine Barthe</span>
+        <div class="logo__sub" style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;">Travail Transgénérationnel Émotionnel et Comportemental</div>
+        <p>Praticienne diplômée de l'École Jade Colline. Accompagnement en présentiel à Castelsarrasin (82) et en visioconférence pour toute la France.</p>
+        <div class="footer-social" style="margin-top:1.25rem;">
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="pratique.html">La pratique</a></li>
+          <li><a href="pour-qui.html">Pour qui</a></li>
+          <li><a href="seances.html">Déroulement</a></li>
+          <li><a href="tarifs.html">Tarifs & RDV</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="faq.html">FAQ complète</a></li>
+          <li><a href="blog/index.html">Blog & Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="cgv.html">CGV</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+        <div style="margin-top:1.5rem;font-size:.82rem;line-height:1.7;">
+          <div>📍 Castelsarrasin (82)</div>
+          <div>📞 07 80 17 64 03</div>
+          <div>✉ kriss.barthe1560@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kristine Barthe. Tous droits réservés.</span>
+      <span>Réalisation <a href="https://www.c2fa.fr" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)">CCFA</a> — SIRET&nbsp;94386198900011</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── COOKIE BANNER ── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-inner">
+    <p class="cookie-text">Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="cookies.html">politique cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Refuser</button>
+      <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── FALC TOGGLE ── -->
+<div class="falc-toggle-wrapper">
+  <button class="falc-toggle-btn" aria-pressed="false">🔤 Lecture simplifiée (FALC)</button>
+</div>
+
+<!-- ── MOBILE STICKY CTA ── -->
+<div class="mobile-sticky-cta">
+  <a href="tarifs.html">Prendre rendez-vous — 70€</a>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+<script>
+  // Formulaire mailto — ouvre la messagerie avec le message pré-rempli
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const prenom  = document.getElementById('prenom').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const sujet   = document.getElementById('sujet').value || '

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déroulement des séances — Comment ça se passe ? | Kristine Barthe — Castelsarrasin (82)</title>
+  <meta name="description" content="Découvrez comment se déroule une séance de Travail Transgénérationnel avec Kristine Barthe : première séance, séances suivantes, fréquence, visioconférence. 70€ / 1h30.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kristinebarthe.fr/seances.html">
+  <meta property="og:title" content="Déroulement des séances | Kristine Barthe — Travail Transgénérationnel">
+  <meta property="og:description" content="Première séance, Arbre Émotionnel des Générations, visioconférence, fin d'accompagnement. Tout ce que vous devez savoir avant de commencer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kristinebarthe.fr/seances.html">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <style>
+    .seance-block {
+      background: #fff;
+      border-radius: 1.25rem;
+      border: 1.5px solid var(--lavande);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .seance-block--accent {
+      background: var(--lavande);
+      border-color: var(--violet-mid);
+    }
+    .seance-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      background: var(--violet-mid);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    .seance-block h3 {
+      font-size: 1.25rem;
+      color: var(--violet-deep);
+      margin-bottom: 1rem;
+    }
+    .seance-block p {
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .seance-block p:last-child { margin-bottom: 0; }
+    .seance-detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0 0;
+    }
+    .seance-detail-list li {
+      display: flex;
+      gap: 1rem;
+      padding: .7rem 0;
+      border-bottom: 1px solid rgba(107, 72, 200, .12);
+      color: var(--text-mid);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .seance-detail-list li:last-child { border-bottom: none; }
+    .seance-detail-list li::before {
+      content: "→";
+      color: var(--violet-mid);
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .visio-block {
+      background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-mid) 100%);
+      border-radius: 1.25rem;
+      padding: 3rem;
+      color: #fff;
+      margin: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 680px) {
+      .visio-block { grid-template-columns: 1fr; }
+      .visio-icon { display: none; }
+    }
+    .visio-block h3 { color: #fff; font-size: 1.35rem; margin-bottom: 1rem; }
+    .visio-block p { color: rgba(255,255,255,.88); line-height: 1.8; margin-bottom: .75rem; }
+    .visio-block p:last-child { margin-bottom: 0; }
+    .visio-icon { font-size: 5rem; opacity: .4; }
+    .visio-reassurance {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+    .visio-tag {
+      background: rgba(255,255,255,.18);
+      border-radius: 2rem;
+      padding: .4rem 1rem;
+      font-size: .82rem;
+      color: #fff;
+    }
+    .freq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .freq-item {
+      background: var(--lavande);
+      border-radius: .875rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .freq-item .freq-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--violet-deep);
+      line-height: 1;
+      margin-bottom: .5rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .freq-item p {
+      color: var(--text-mid);
+      font-size: .9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .fin-block {
+      background: #f9f7fe;
+      border-left: 4px solid var(--violet-mid);
+      border-radius: 0 .875rem .875rem 0;
+      padding: 2rem 2.5rem;
+      margin: 2rem 0;
+      max-width: 780px;
+    }
+    .fin-block h3 { color: var(--violet-deep); margin-bottom: .75rem; }
+    .fin-block p { color: var(--text-mid); line-height: 1.8; margin-bottom: .75rem; }
+    .fin-block p:last-child { margin-bottom: 0; }
+    .price-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--violet-deep);
+      color: #fff;
+      border-radius: 1rem;
+      padding: 1.75rem 2.5rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .price-highlight .ph-amount {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1;
+    }
+    .price-highlight .ph-details {
+      font-size: .9rem;
+      color: rgba(255,255,255,.82);
+      line-height: 1.7;
+    }
+    .price-highlight .ph-details strong { color: #fff; display: block; font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Kristine Barthe — Accueil">
+      <img src="assets/images/logo-kristine.png" alt="Kristine Barthe — Travail Transgénérationnel" class="logo__img" width="60" height="60">
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="pratique.html">La pratique</a>
+      <a href="pour-qui.html">Pour qui</a>
+      <a href="seances.html" aria-current="page">Séances</a>
+      <a href="faq.html">FAQ</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="tarifs.html" class="header-cta">Prendre rendez-vous</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <span class="eyebrow">Avant de commencer</span>
+    <h1 id="page-title">Comment se déroule une séance ?</h1>
+    <p class="page-hero__lead">Pas de protocole imposé, pas de surprise. Voici ce qui vous attend, étape par étape, à votre rythme.</p>
+  </div>
+</section>
+
+<!-- ── PREMIÈRE SÉANCE ── -->
+<section class="section" aria-labelledby="premiere-title">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-header" style="text-align: left; padding-bottom: 1rem;">
+      <span class="eyebrow">Étape 1</span>
+      <h2 id="premiere-title">La première séance</h2>
+    </div>
+    <div class="seance-block">
+      <div class="seance-num">1</div>
+      <h3>Prise de contact et exploration de la demande</h3>
+      <p>La première séance est un espace de rencontre. Rien à préparer, aucun document à apporter, aucun récit à avoir construit à l'avance. Vous venez avec ce que vous avez : une question, une sensation, une envie d'explorer.</p>
+      <p>Ensemble, nous prenons le temps de comprendre ce qui vous amène. Qu'est-ce qui vous a poussé à faire cette démarche ? Qu'est-ce qui résonne dans votre vie en ce moment ? Y a-t-il des situations récurrentes que vous n'arrivez pas à changer ? Ces premières questions permettent de poser les grandes lignes d'un axe de travail.</p>
+      <p>Nous abordons également les premières données de votre histoire familiale — ce que vous savez, ce qui est flou, ce dont on ne parlait pas. C'est le début de la construction de votre Arbre Émotionnel des Générations.</p>
+      <ul class="seance-detail-list">
+        <li>Durée : 1h30</li>
+        <li>Lieu : présentiel à Castelsarrasin (82) ou visioconférence</li>
+        <li>Rien à préparer ni à apporter</li>
+        <li>Cadre confidentiel et bienveillant</li>
+        <li>À la fin : vous décidez librement si vous souhaitez continuer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── SÉANCES SUIVANTES ── -->
+<section class="section section--light" aria-labelledby="suivantes-title">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-header" style="text-align: left; padding-bottom: 1rem;">
+      <span class="eyebrow">Étape 2</span>
+      <h2 id="suivantes-title">Les séances suivantes</h2>
+    </div>
+    <div class="seance-block seance-block--accent">
+      <div class="seance-num">2</div>
+      <h3>L'Arbre Émotionnel des Générations</h3>
+      <p>Au fil des séances, nous construisons progressivement votre Arbre Émotionnel des Générations. Contrairement à un simple arbre généalogique, celui-ci cartographie les événements émotionnellement significatifs de votre lignée : ruptures, deuils, migrations, violences, silences, secrets, réussites — tout ce qui a marqué les générations qui vous ont précédé.</p>
+      <p>À mesure que cet arbre se dessine, des liens apparaissent. Une façon de fuir les conflits héritée d'une grand-mère. Une difficulté à recevoir de l'amour qui se retrouve sur trois générations. Un sentiment de ne jamais être à sa place qui remonte bien avant votre naissance. Ces liens, une fois identifiés, permettent de comprendre — et comprendre est souvent le premier pas vers la liberté.</p>
+      <p>Chaque séance suit le fil de ce qui est présent pour vous ce jour-là. Il n'y a pas de programme fixe, pas de chapitre à couvrir. Le travail avance selon votre rythme et ce qui émerge naturellement.</p>
+      <ul class="seance-detail-list">
+        <li>Construction progressive de l'Arbre Émotionnel des Générations</li>
+        <li>Identification des schémas répétitifs et des transmissions invisibles</li>
+        <li>Travail sur les loyautés, les dettes et les silences familiaux</li>
+        <li>Exploration à votre rythme, sans programme imposé</li>
+        <li>Chaque séance est autonome et utile en elle-même</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── FRÉQUENCE ET DURÉE ── -->
+<section class="section" aria-labelledby="freq-title">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-header">
+      <span class="eyebrow">Rythme de l'accompagnement</span>
+      <h2 id="freq-title">Fréquence et durée</h2>
+      <p>Aucun rythme imposé. Voici ce que la pratique montre en général.</p>
+    </div>
+    <div class="freq-grid">
+      <div class="freq-item">
+        <div class="freq-num">1h30</div>
+        <p>Durée de chaque séance, en présentiel comme en visio</p>
+      </div>
+      <div class="freq-item">
+        <div class="freq-num">2–4 sem.</div>
+        <p>Intervalle habituel entre deux séances, pour laisser le travail s'intégrer</p>
+      </div>
+      <div class="freq-item">
+        <div class="freq-num">0</div>
+        <p>Nombre minimum de séances — pas d'engagement de durée ni de forfait</p>
+      </div>
+    </div>
+    <p style="color: var(--text-mid); font-size: .96rem; line-height: 1.8; max-width: 680px; margin: 1rem auto 0;">Le rythme idéal est celui qui vous convient. Certaines personnes viennent toutes les deux semaines, d'autres une fois par mois. Il peut y avoir des pauses, des reprises. Ce qui compte, c'est que le travail ait le temps de s'intégrer entre les séances — souvent, c'est là que les vraies prises de conscience ont lieu.</p>
+  </div>
+</section>
+
+<!-- ── VISIOCONFÉRENCE ── -->
+<section class="section section--light" aria-labelledby="visio-title">
+  <div class="container" style="max-width: 860px;">
+    <div class="visio-block">
+      <div>
+        <h3 id="visio-title">Les séances en visioconférence</h3>
+        <p>Les séances en visio se déroulent exactement de la même façon qu'en présentiel. Vous pouvez être chez vous, dans un espace calme et confidentiel. La qualité du travail est identique — de nombreuses personnes accompagnées ont commencé en visio et ne souhaitent pas changer de format.</p>
+        <p>Aucun logiciel à installer. Vous recevez un lien simple par email avant la séance. Il vous suffit de cliquer sur ce lien depuis votre ordinateur, votre tablette ou votre téléphone. La connexion est sécurisée et confidentielle.</p>
+        <p>Les séances en visioconférence sont accessibles depuis toute la France — et même depuis l'étranger si vous êtes francophone.</p>
+        <div class="visio-reassurance">
+          <span class="visio-tag">Aucun logiciel à installer</span>
+          <span class="visio-tag">Lien simple par email</span>
+          <span class="visio-tag">Connexion sécurisée</span>
+          <span class="visio-tag">Toute la France</span>
+          <span class="visio-tag">Même qualité qu'en présentiel</span>
+        </div>
+      </div>
+      <div class="visio-icon" aria-hidden="true">💻</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FIN D'ACCOMPAGNEMENT ── -->
+<section class="section" aria-labelledby="fin-title">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-header" style="text-align: left; padding-bottom: 1rem;">
+      <span class="eyebrow">Liberté totale</span>
+      <h2 id="fin-title">La fin de l'accompagnement</h2>
+    </div>
+    <div class="fin-block">
+      <h3>Sans engagement, sans contrainte</h3>
+      <p>Il n'y a pas de durée prédéfinie pour un accompagnement. Pas de forfait à acheter, pas de nombre de séances imposé. Vous venez tant que c'est utile pour vous — et vous arrêtez quand vous le souhaitez.</p>
+      <p>La fin de l'accompagnement peut être décidée à tout moment, par vous ou d'un commun accord. Certaines personnes font quelques séances et trouvent ce dont elles avaient besoin. D'autres reviennent sur des périodes plus longues, par cycles, selon les étapes de leur vie.</p>
+      <p>L'idée n'est pas de créer une dépendance à l'accompagnement, mais au contraire de vous donner progressivement les clés pour avancer seul — avec une compréhension plus fine de votre histoire et de vous-même.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA AVEC PRIX ── -->
+<section class="section section--violet cta-section">
+  <div class="container" style="text-align: center;">
+    <h2>Prêt à fixer un premier rendez-vous ?</h2>
+    <p>Premier rendez-vous sans engagement. Présentiel à Castelsarrasin (82) ou visio pour toute la France.</p>
+    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+      <div class="price-highlight">
+        <div class="ph-amount">70€</div>
+        <div class="ph-details">
+          <strong>La séance de 1h30</strong>
+          Présentiel à Castelsarrasin ou visioconférence<br>
+          Premier RDV sans engagement · Annulation remboursée &gt; 48h
+        </div>
+      </div>
+    </div>
+    <a href="tarifs.html" class="btn btn--white">Voir les tarifs et prendre rendez-vous</a>
+    <p class="cta-micro">Règlement en début de séance — espèces, chèque ou virement</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo__name" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;">Kristine Barthe</span>
+        <div class="logo__sub" style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;">Travail Transgénérationnel Émotionnel et Comportemental</div>
+        <p>Praticienne diplômée de l'École Jade Colline. Accompagnement en présentiel à Castelsarrasin (82) et en visioconférence pour toute la France.</p>
+        <div class="footer-social" style="margin-top:1.25rem;">
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="pratique.html">La pratique</a></li>
+          <li><a href="pour-qui.html">Pour qui</a></li>
+          <li><a href="seances.html">Déroulement</a></li>
+          <li><a href="tarifs.html">Tarifs & RDV</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="faq.html">FAQ complète</a></li>
+          <li><a href="blog/index.html">Blog & Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="cgv.html">CGV</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+        <div style="margin-top:1.5rem;font-size:.82rem;line-height:1.7;">
+          <div>📍 Castelsarrasin (82)</div>
+          <div>📞 07 80 17 64 03</div>
+          <div>✉ kriss.barthe1560@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Kristine Barthe. Tous droits réservés.</span>
+      <span>Réalisation <a href="https://www.c2fa.fr" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)">CCFA</a> — SIRET&nbsp;94386198900011</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── COOKIE BANNER ── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-inner">
+    <p class="cookie-text">Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="cookies.html">politique cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn--refuse" id="cookie-refuse">Refuser</button>
+      <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accepter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── FALC TOGGLE ── -->
+<div class="falc-toggle-wrapper">
+  <button class="falc-toggle-btn" aria-pressed="false">🔤 Lecture simplifiée (FALC)</button>
+</div>
+
+<!-- ── MOBILE STICKY CTA ── -->
+<div class="mobile-sticky-cta">
+  <a href="tarifs.html">Prendre rendez-vous — 70€</a>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

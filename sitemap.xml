@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://kristinebarthe.fr/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://kristinebarthe.fr/pratique.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kristinebarthe.fr/pour-qui.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kristinebarthe.fr/seances.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kristinebarthe.fr/tarifs.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kristinebarthe.fr/a-propos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kristinebarthe.fr/temoignages.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kristinebarthe.fr/faq.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kristinebarthe.fr/contact.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/article-1.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/article-2.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/article-3.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/article-4.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kristinebarthe.fr/blog/article-5.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+</urlset>
