@@ -48,7 +48,7 @@
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 17px; }
+html { scroll-behavior: smooth; font-size: 17px; overflow-x: hidden; }
 body {
   font-family: var(--font-sans);
   color: var(--text);
@@ -56,6 +56,7 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ── SCROLL ANIMATIONS ── */
@@ -960,8 +961,20 @@ body.falc-mode .standard-text { display: none; }
   .hero-image { display: none; }
   .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .two-col--60-40 { grid-template-columns: 1fr; }
+  /* photo about: order inversé sur mobile, image en premier */
+  .about-photo { order: -1; }
+  .about-photo img { height: 320px; }
 }
+
 @media (max-width: 768px) {
+  html { font-size: 15.5px; }
+
+  /* Blobs décoratifs : atténuer pour ne pas déborder sur mobile */
+  .hero::before, .hero::after,
+  .cta-section::before, .cta-section::after { opacity: 0.25; }
+
+  /* Navigation */
   .main-nav { display: none; }
   .main-nav.open {
     display: flex;
@@ -971,25 +984,95 @@ body.falc-mode .standard-text { display: none; }
     left: 0; right: 0;
     background: var(--white);
     border-bottom: 1px solid var(--lavande-mid);
-    padding: 1rem 1.5rem;
+    box-shadow: 0 8px 24px rgba(45,27,105,.12);
+    padding: 1rem 1.5rem 1.5rem;
     gap: 0.25rem;
     z-index: 99;
   }
-  .main-nav.open a { padding: 0.75rem 1rem; display: block; }
+  .main-nav.open a {
+    padding: 0.75rem 1rem;
+    display: block;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+  }
+  .main-nav.open .header-cta {
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem !important;
+    border-radius: 99px;
+    font-size: 1rem !important;
+  }
   .header-cta { display: none; }
   .menu-toggle { display: flex; }
-  .mobile-sticky-cta { display: block; }
+
+  /* Logo : cacher le sous-titre pour gagner de la place */
+  .logo__sub { display: none; }
+  .logo__name { font-size: 1.1rem; }
+  .logo__img { width: 44px; height: 44px; }
+
+  /* Sections */
   .section { padding: 3rem 0; }
-  .hero { padding: 3rem 0 2.5rem; }
+  .hero { padding: 3rem 0 5rem; }
+
+  /* Hero eyebrow : éviter le débordement */
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    padding: 0.5rem 0.9rem;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  /* Boutons hero : pleine largeur et empilés */
+  .hero-actions { flex-direction: column; gap: 0.75rem; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  /* Reassurance hero : colonne */
+  .hero-reassurance { flex-direction: column; gap: 0.5rem; }
+
+  /* CTA mobile */
+  .mobile-sticky-cta { display: block; }
+
+  /* Footer */
   .footer-grid { grid-template-columns: 1fr; }
   .reassurance-strip { flex-direction: column; align-items: flex-start; }
   .article-nav { flex-direction: column; }
+
+  /* Témoignages */
+  .testimonial { padding: 1.75rem; }
+  .testimonial::before { font-size: 5rem; top: -0.25rem; left: 1.25rem; }
+
+  /* Price card */
+  .price-card { padding: 1.75rem; }
+  .price-amount { font-size: 2.8rem; }
 }
+
 @media (max-width: 480px) {
-  .cards-grid--3, .cards-grid--4 { grid-template-columns: 1fr; }
+  html { font-size: 15px; }
+
+  /* Grilles : une colonne */
+  .cards-grid--2,
+  .cards-grid--3,
+  .cards-grid--4 { grid-template-columns: 1fr; }
+  .pourqui-cards { grid-template-columns: 1fr; }
+
+  /* Section header */
+  .section-header { margin-bottom: 2rem; }
+
+  /* Cookie */
   .cookie-inner { flex-direction: column; }
   .cookie-actions { width: 100%; justify-content: flex-end; }
-  .falc-toggle-wrapper { bottom: 4.5rem; }
+
+  /* FALC toggle au dessus de la sticky CTA */
+  .falc-toggle-wrapper { bottom: 4.5rem; right: 1rem; }
+  .falc-toggle-btn { font-size: 0.72rem; padding: 0.4rem 0.75rem; }
+
+  /* Footer social icons */
+  .footer-social { margin-top: 1rem; }
+
+  /* Steps : réduire l'écart */
+  .step { gap: 1rem; }
+  .step-num { width: 44px; height: 44px; font-size: 1.2rem; }
 }
 
 /* ── UTILITIES ── */
