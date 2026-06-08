@@ -126,7 +126,15 @@ strong { font-weight: 500; color: var(--violet); }
   padding: 0 1.5rem;
   gap: 1.5rem;
 }
-.logo { display: flex; flex-direction: column; gap: 2px; }
+.logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; }
+.logo__img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 4px rgba(45,27,105,.2));
+}
+.logo > div { display: flex; flex-direction: column; gap: 1px; }
 .logo__name {
   font-family: var(--font-serif);
   font-size: 1.25rem;
@@ -271,18 +279,19 @@ strong { font-weight: 500; color: var(--violet); }
   align-items: center;
 }
 .hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--violet-mid);
-  letter-spacing: .08em;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: .06em;
   text-transform: uppercase;
-  background: var(--lavande);
-  padding: 0.35rem 0.9rem;
-  border-radius: 99px;
-  margin-bottom: 1.5rem;
+  background: var(--violet);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.75rem;
+  width: fit-content;
+  line-height: 1.4;
+  box-shadow: 0 3px 12px rgba(45,27,105,.25);
 }
 .hero h1 { margin-bottom: 1rem; }
 .hero-lead {
@@ -597,7 +606,7 @@ strong { font-weight: 500; color: var(--violet); }
 .cta-section h2 { color: var(--white); margin-bottom: 1rem; position: relative; }
 .cta-section p { color: rgba(255,255,255,.85); margin-bottom: 2rem; font-size: 1.05rem; position: relative; }
 .cta-section .btn { position: relative; }
-.cta-micro { font-size: 0.8rem; color: rgba(255,255,255,.6); margin-top: 1rem; position: relative; }
+.cta-micro { font-size: 0.85rem; color: rgba(255,255,255,.78); margin-top: 1rem; position: relative; }
 
 /* ── BLOG ── */
 .blog-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
@@ -795,7 +804,7 @@ strong { font-weight: 500; color: var(--violet); }
   margin-bottom: 3rem;
 }
 .footer-brand .logo__name { color: var(--white); margin-bottom: 0.75rem; display: block; }
-.footer-brand .logo__sub { color: rgba(255,255,255,.5); }
+.footer-brand .logo__sub { color: rgba(255,255,255,.68); }
 .footer-brand p { font-size: 0.875rem; margin-top: 1rem; line-height: 1.7; }
 .footer-col h4 {
   font-family: var(--font-sans);
@@ -807,7 +816,7 @@ strong { font-weight: 500; color: var(--violet); }
   margin-bottom: 1rem;
 }
 .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
-.footer-col a { font-size: 0.875rem; color: rgba(255,255,255,.6); transition: color .2s; }
+.footer-col a { font-size: 0.875rem; color: rgba(255,255,255,.75); transition: color .2s; }
 .footer-col a:hover { color: var(--white); }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.15);
@@ -887,7 +896,7 @@ body.falc-mode .standard-text { display: none; }
 }
 .breadcrumb a { color: rgba(255,255,255,.7); }
 .breadcrumb a:hover { color: var(--white); }
-.breadcrumb span { color: rgba(255,255,255,.4); }
+.breadcrumb span { color: rgba(255,255,255,.6); }
 
 /* ── PAGE HERO (bannière intérieure, alternative à .page-banner) ── */
 .page-hero {
