@@ -126,37 +126,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ── HEADER SHADOW ON SCROLL ────────────────────────────────────
+// ── HEADER SCROLLED CLASS ──────────────────────────────────────
 const header = document.querySelector('.site-header');
 if (header) {
   const onScroll = () => {
-    header.style.boxShadow = window.scrollY > 10 ? '0 2px 16px rgba(45,27,105,.12)' : 'none';
+    header.classList.toggle('scrolled', window.scrollY > 20);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
 // ── ANIMATIONS ON SCROLL (IntersectionObserver) ────────────────
 if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
+        // Délai progressif pour les éléments d'une même grille
+        const siblings = entry.target.parentElement?.children;
+        let delay = 0;
+        if (siblings && siblings.length > 1) {
+          const idx = Array.from(siblings).indexOf(entry.target);
+          delay = Math.min(idx * 80, 320);
+        }
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        fadeObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.card, .step, .blog-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity .5s ease, transform .5s ease';
-    observer.observe(el);
+  document.querySelectorAll(
+    '.card, .step, .blog-card, .pourqui-card, .testimonial, .section-header, .price-card'
+  ).forEach(el => {
+    el.classList.add('fade-in');
+    fadeObserver.observe(el);
   });
-
-  // Ajouter in-view style
-  const style = document.createElement('style');
-  style.textContent = '.in-view { opacity: 1 !important; transform: translateY(0) !important; }';
-  document.head.appendChild(style);
 }
 
 // ── CONTACT FORM (Formspree) ───────────────────────────────────
