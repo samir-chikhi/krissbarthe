@@ -1,0 +1,25 @@
+{
+  "name": "Kristine Barthe — Travail Transgénérationnel",
+  "short_name": "Kristine Barthe",
+  "description": "Praticienne en Travail Transgénérationnel Émotionnel et Comportemental à Castelsarrasin (82).",
+  "lang": "fr-FR",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#2D1B69",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo-kristine.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
