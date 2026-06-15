@@ -332,7 +332,7 @@ strong { font-weight: 500; color: var(--violet); }
   width: 100%;
   border-radius: 2rem 4rem 2rem 4rem;
   object-fit: cover;
-  height: 460px;
+  height: auto;
   box-shadow: var(--shadow-lg);
 }
 .hero-badge {
