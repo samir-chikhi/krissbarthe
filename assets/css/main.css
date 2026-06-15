@@ -294,7 +294,16 @@ strong { font-weight: 500; color: var(--violet); }
   line-height: 1.4;
   box-shadow: 0 3px 12px rgba(45,27,105,.25);
 }
-.hero h1 { margin-bottom: 1rem; }
+.hero h1 { margin-bottom: 0.75rem; }
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--violet);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
 .hero-lead {
   font-size: 1.1rem;
   color: var(--text-mid);
