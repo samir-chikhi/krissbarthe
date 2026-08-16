@@ -196,37 +196,68 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 })();
 
-// ── CONTACT FORM (Formspree) ───────────────────────────────────
+// ── CONTACT FORM ───────────────────────────────────────────────
+// Le formulaire ouvre la messagerie du visiteur avec le message pré-rempli.
+// Aucun service tiers, aucune donnée ne transite par un serveur externe.
+//
+// Pour basculer plus tard vers un envoi direct (Formspree ou équivalent) :
+// renseigner l'URL du point d'envoi ci-dessous, le reste s'adapte tout seul.
+const CONTACT_ENDPOINT = '';           // ex. 'https://formspree.io/f/xxxxxxxx'
+const CONTACT_EMAIL    = 'contact@kristinebarthe-coaching.fr';
+
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const submitBtn = contactForm.querySelector('[type="submit"]');
-    const successMsg = document.getElementById('form-success');
-    const errorMsg = document.getElementById('form-error');
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Envoi en cours…';
-
-    try {
-      const res = await fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' },
-      });
-
-      if (res.ok) {
-        contactForm.reset();
-        if (successMsg) successMsg.style.display = 'block';
-        if (errorMsg) errorMsg.style.display = 'none';
-        submitBtn.textContent = 'Message envoyé ✓';
-      } else {
-        throw new Error();
-      }
-    } catch {
-      if (errorMsg) errorMsg.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Envoyer';
+    // Le formulaire est en novalidate : on déclenche la validation nous-mêmes
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
     }
+
+    const submitBtn   = contactForm.querySelector('[type="submit"]');
+    const successMsg  = document.getElementById('form-success');
+    const errorMsg    = document.getElementById('form-error');
+    const btnLabel    = submitBtn ? submitBtn.textContent : '';
+    const data        = new FormData(contactForm);
+    const prenom      = (data.get('prenom')  || '').toString().trim();
+    const email       = (data.get('email')   || '').toString().trim();
+    const sujet       = (data.get('sujet')   || '').toString().trim();
+    const message     = (data.get('message') || '').toString().trim();
+
+    const show = el => { if (el) el.style.display = 'block'; };
+    const hide = el => { if (el) el.style.display = 'none'; };
+
+    // ── Mode 1 : envoi direct, si un point d'envoi est configuré ──
+    if (CONTACT_ENDPOINT) {
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi en cours…'; }
+      try {
+        const res = await fetch(CONTACT_ENDPOINT, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' },
+        });
+        if (!res.ok) throw new Error();
+        contactForm.reset();
+        hide(errorMsg);
+        show(successMsg);
+        if (submitBtn) submitBtn.textContent = 'Message envoyé ✓';
+      } catch {
+        show(errorMsg);
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = btnLabel; }
+      }
+      return;
+    }
+
+    // ── Mode 2 : ouverture de la messagerie du visiteur ──
+    const objet = sujet ? `${sujet} — ${prenom}` : `Message depuis le site — ${prenom}`;
+    const corps = `${message}\n\n—\n${prenom}\n${email}`;
+    const lien  = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(corps)}`;
+
+    hide(errorMsg);
+    show(successMsg);
+    if (successMsg) successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.location.href = lien;
   });
 }
