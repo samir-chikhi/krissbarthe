@@ -19,7 +19,7 @@ Positionnement : **sérieux, doux, intelligent, premium** — sans ésotérisme 
 | Champ | Valeur |
 |---|---|
 | Nom | Kristine Barthe |
-| Email | kriss.barthe1560@gmail.com |
+| Email | contact@kristinebarthe-coaching.fr |
 | Téléphone | 07 80 17 64 03 |
 | Adresse cabinet | 12 rue Louis Victor Guilmin, 82100 Castelsarrasin |
 | Tarif | 70 € / séance de 1h30 (parcours conseillé : 3 séances) |
@@ -49,7 +49,7 @@ Polices     : Google Fonts — Cormorant Garamond (titres) + Inter (corps)
 RDV         : Calendly (embed inline sur tarifs.html — À CONFIGURER)
 Formulaire  : Formspree (contact.html — À CONFIGURER)
 Hébergement : OVH mutualisé (Apache + .htaccess)
-Domaine     : kristinebarthe.fr (à commander chez OVH)
+Domaine     : kristinebarthe-coaching.fr (à commander chez OVH)
 SEO         : Schema.org (LocalBusiness, Article, FAQPage, Service)
 Repo GitHub : https://github.com/samir-chikhi/krissbarthe
 Serveur dev : npx serve . -p 5500  (config : .claude/launch.json)
@@ -152,7 +152,7 @@ C:\Users\samir\Desktop\site internet Kris\site internet kris\
 1. **SIREN** — Compléter dans `mentions-legales.html` et `cgv.html`
 2. **Calendly** — Créer compte + configurer événement + remplacer URL dans `tarifs.html`
 3. **Formspree** — Créer compte + remplacer endpoint dans `contact.html`
-4. **Domaine** — Commander `kristinebarthe.fr` chez OVH
+4. **Domaine** — Commander `kristinebarthe-coaching.fr` chez OVH
 5. **Validation juridique** — Faire relire CGV, mentions légales, confidentialité par un juriste
 
 ### 🟡 Importants
@@ -202,4 +202,4 @@ git push origin main
 
 ---
 
-*Document fusionné : Cowork (CCFA, construction initiale) + Claude Code (design & ajustements) — Juin 2026*
+*Document fusionné : Cowork (MUSIVA, construction initiale) + Claude Code (design & ajustements) — Juin 2026*

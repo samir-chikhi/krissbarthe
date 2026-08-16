@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2D1B69">
   <title>Contact — Poser une question à Kristine Barthe | Castelsarrasin (82)</title>
-  <meta name="description" content="Contactez Kristine Barthe, praticienne en Travail Transgénérationnel Émotionnel et Comportemental à Castelsarrasin (82). Formulaire, téléphone, email. Premier RDV sans engagement.">
+  <meta name="description" content="Contactez Kristine Barthe, comportementaliste émotionnel transgénérationnel à Castelsarrasin (82). Formulaire, téléphone, email. Premier RDV sans engagement.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://kristinebarthe.fr/contact.html">
+  <link rel="canonical" href="https://kristinebarthe-coaching.fr/contact.html">
   <meta property="og:title" content="Contact | Kristine Barthe — Travail Transgénérationnel">
-  <meta property="og:description" content="Posez une question ou prenez rendez-vous avec Kristine Barthe, praticienne à Castelsarrasin (82).">
+  <meta property="og:description" content="Posez une question ou prenez rendez-vous avec Kristine Barthe, comportementaliste à Castelsarrasin (82).">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kristinebarthe.fr/contact.html">
-  <meta property="og:image" content="https://kristinebarthe.fr/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://kristinebarthe-coaching.fr/contact.html">
+  <meta property="og:image" content="https://kristinebarthe-coaching.fr/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Kristine Barthe — Travail Transgénérationnel">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Kristine Barthe">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://kristinebarthe.fr/assets/images/og-image.jpg">
+  <meta name="twitter:image" content="https://kristinebarthe-coaching.fr/assets/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="apple-touch-icon" href="assets/images/logo-kristine.png">
@@ -67,21 +67,28 @@
     .form-group select {
       width: 100%;
       border: 1.5px solid #e0d8f5;
-      border-radius: .625rem;
+      border-radius: .875rem;
       padding: .85rem 1.1rem;
       font-size: .97rem;
       color: var(--text-dark);
       background: #fff;
-      transition: border-color .2s, box-shadow .2s;
+      transition: border-color .25s ease, box-shadow .25s ease, background .2s ease;
       font-family: inherit;
       box-sizing: border-box;
+    }
+    .form-group input:hover,
+    .form-group textarea:hover,
+    .form-group select:hover {
+      border-color: var(--violet-light);
+      background: #fdfaff;
     }
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
       border-color: var(--violet-mid);
-      box-shadow: 0 0 0 3px rgba(107, 72, 200, .12);
+      box-shadow: 0 0 0 4px rgba(107,72,200,.12);
+      background: #fdfaff;
     }
     .form-group textarea {
       resize: vertical;
@@ -91,21 +98,23 @@
     .form-submit {
       width: 100%;
       padding: 1.1rem;
-      background: var(--violet-mid);
+      background: linear-gradient(135deg, var(--violet-mid) 0%, var(--violet) 100%);
       color: #fff;
       border: none;
-      border-radius: .75rem;
+      border-radius: 99px;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background .2s, transform .1s;
+      transition: box-shadow .3s ease, transform .25s cubic-bezier(.22,1,.36,1), background .2s ease;
       letter-spacing: .02em;
+      position: relative;
+      overflow: hidden;
     }
     .form-submit:hover {
-      background: var(--violet-deep);
-      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(45,27,105,.3);
+      transform: translateY(-2px);
     }
-    .form-submit:active { transform: translateY(0); }
+    .form-submit:active { transform: scale(.98); }
     .rgpd-note {
       font-size: .8rem;
       color: var(--text-light);
@@ -214,13 +223,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://kristinebarthe.fr/"
+        "item": "https://kristinebarthe-coaching.fr/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contact",
-        "item": "https://kristinebarthe.fr/contact.html"
+        "item": "https://kristinebarthe-coaching.fr/contact.html"
       }
     ]
   }
@@ -328,16 +337,16 @@
 
         <div class="form-success" id="form-success" role="status" aria-live="polite" style="display:none;background:var(--green-bg);border-radius:var(--radius-md);padding:1.5rem;margin-top:1rem;">
           <h3 style="color:var(--green-ok);">Votre messagerie s'est ouverte ✓</h3>
-          <p>Il ne vous reste plus qu'à envoyer l'email depuis votre messagerie. Si rien ne s'est ouvert, écrivez directement à <a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a></p>
+          <p>Il ne vous reste plus qu'à envoyer l'email depuis votre messagerie. Si rien ne s'est ouvert, écrivez directement à <a href="mailto:contact@kristinebarthe-coaching.fr">contact@kristinebarthe-coaching.fr</a></p>
         </div>
 
         <div class="form-error" id="form-error" role="alert" aria-live="assertive" style="display:none;background:#FDECEC;border-radius:var(--radius-md);padding:1.5rem;margin-top:1rem;">
           <h3 style="color:#B3261E;">L'envoi n'a pas abouti</h3>
-          <p>Votre message n'a pas pu être envoyé. Merci de réessayer, ou de contacter Kristine directement par téléphone au <a href="tel:+33780176403">07 80 17 64 03</a> ou par email à <a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a>.</p>
+          <p>Votre message n'a pas pu être envoyé. Merci de réessayer, ou de contacter Kristine directement par téléphone au <a href="tel:+33780176403">07 80 17 64 03</a> ou par email à <a href="mailto:contact@kristinebarthe-coaching.fr">contact@kristinebarthe-coaching.fr</a>.</p>
         </div>
 
         <div class="rgpd-note" role="note">
-          <strong>Données personnelles :</strong> Les informations saisies dans ce formulaire sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers, ni utilisées à des fins commerciales. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez : <a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a>. Pour en savoir plus, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.
+          <strong>Données personnelles :</strong> Les informations saisies dans ce formulaire sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers, ni utilisées à des fins commerciales. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez : <a href="mailto:contact@kristinebarthe-coaching.fr">contact@kristinebarthe-coaching.fr</a>. Pour en savoir plus, consultez notre <a href="confidentialite.html">politique de confidentialité</a>.
         </div>
       </div>
 
@@ -356,7 +365,7 @@
             <div class="contact-info-item-icon">✉</div>
             <div class="contact-info-item-text">
               <div class="ci-label">Email</div>
-              <div class="ci-value"><a href="mailto:kriss.barthe1560@gmail.com">kriss.barthe1560@gmail.com</a></div>
+              <div class="ci-value"><a href="mailto:contact@kristinebarthe-coaching.fr">contact@kristinebarthe-coaching.fr</a></div>
             </div>
           </div>
           <div class="contact-info-item">
@@ -395,7 +404,7 @@
       <div class="footer-brand">
         <span class="logo__name" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;">Kristine Barthe</span>
         <div class="logo__sub" style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;">Travail Transgénérationnel Émotionnel et Comportemental</div>
-        <p>Praticienne en Travail Transgénérationnel. Castelsarrasin (82).</p>
+        <p>Comportementaliste émotionnel transgénérationnel. Castelsarrasin (82).</p>
         <div class="footer-social" style="margin-top:1.25rem;">
           <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
           <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
@@ -431,13 +440,13 @@
         <div style="margin-top:1.5rem;font-size:.82rem;line-height:1.7;">
           <div>📍 Castelsarrasin (82)</div>
           <div>📞 07 80 17 64 03</div>
-          <div>✉ kriss.barthe1560@gmail.com</div>
+          <div>✉ contact@kristinebarthe-coaching.fr</div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Kristine Barthe. Tous droits réservés.</span>
-      <span>Réalisation <a href="https://www.c2fa.fr" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)">CCFA</a> — SIRET&nbsp;94386198900011</span>
+      <span>Réalisation <a href="https://www.musiva.fr" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)">MUSIVA</a> — SIRET&nbsp;94386198900011</span>
     </div>
   </div>
 </footer>

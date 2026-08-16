@@ -1,7 +1,7 @@
 # Kristine Barthe — Site Internet
 ## Travail Transgénérationnel Émotionnel et Comportemental
 
-Site statique HTML/CSS/JS — Développé par CCFA pour Kristine Barthe.
+Site statique HTML/CSS/JS — Développé par MUSIVA pour Kristine Barthe.
 
 ---
 
@@ -76,15 +76,15 @@ kristine-barthe/
 ### 1. Calendly
 - Créer le compte Kristine sur https://calendly.com
 - Créer un événement "Séance 1h30 — 70€"
-- Remplacer `https://calendly.com/kristine-barthe/seance` dans `tarifs.html`
+- URL Calendly active dans `tarifs.html` : `https://calendly.com/kriss-barthe1560`
 
 ### 2. Formspree (formulaire de contact)
 - Créer un compte sur https://formspree.io
-- Créer un formulaire lié à kriss.barthe1560@gmail.com
+- Créer un formulaire lié à contact@kristinebarthe-coaching.fr
 - Remplacer `https://formspree.io/f/XXXXX` dans `contact.html`
 
 ### 3. Domaine et DNS
-- Domaine recommandé : `kristinebarthe.fr` (vérifier disponibilité sur OVH)
+- Domaine recommandé : `kristinebarthe-coaching.fr` (vérifier disponibilité sur OVH)
 - Alternative : `kristine-barthe.fr` ou `arbre-emotionnel-generations.fr`
 - DNS : pointer le domaine vers l'hébergement OVH
 
@@ -126,6 +126,6 @@ git push -u origin main
 
 ## Contacts projet
 
-- **Praticienne** : Kristine Barthe — kriss.barthe1560@gmail.com — 07 80 17 64 03
-- **Développeur** : Claude / CCFA — samir.chikhi@gmail.com
+- **Praticienne** : Kristine Barthe — contact@kristinebarthe-coaching.fr — 07 80 17 64 03
+- **Développeur** : Claude / MUSIVA — samir.chikhi@gmail.com
 - **Hébergeur** : OVH

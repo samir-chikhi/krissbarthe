@@ -44,4 +44,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://kristinebarthe.fr/sitemap.xml
+Sitemap: https://kristinebarthe-coaching.fr/sitemap.xml

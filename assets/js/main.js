@@ -51,25 +51,7 @@ if (menuToggle && mainNav) {
   });
 })();
 
-// ── FAQ ACCORDION ──────────────────────────────────────────────
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const answer = btn.nextElementSibling;
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-    // Fermer tous les autres (comportement accordion)
-    document.querySelectorAll('.faq-question').forEach(other => {
-      if (other !== btn) {
-        other.setAttribute('aria-expanded', 'false');
-        const otherAnswer = other.nextElementSibling;
-        if (otherAnswer) otherAnswer.classList.remove('open');
-      }
-    });
-
-    btn.setAttribute('aria-expanded', !isOpen);
-    if (answer) answer.classList.toggle('open', !isOpen);
-  });
-});
+// ── FAQ ACCORDION (géré après IntersectionObserver, voir bas de fichier) ──
 
 // ── FALC TOGGLE ────────────────────────────────────────────────
 (function initFalc() {
@@ -139,28 +121,80 @@ if (header) {
 // ── ANIMATIONS ON SCROLL (IntersectionObserver) ────────────────
 if ('IntersectionObserver' in window) {
   const fadeObserver = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        // Délai progressif pour les éléments d'une même grille
-        const siblings = entry.target.parentElement?.children;
-        let delay = 0;
-        if (siblings && siblings.length > 1) {
-          const idx = Array.from(siblings).indexOf(entry.target);
-          delay = Math.min(idx * 80, 320);
-        }
-        setTimeout(() => entry.target.classList.add('visible'), delay);
-        fadeObserver.unobserve(entry.target);
-      }
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const siblings = Array.from(entry.target.parentElement?.children || []);
+      const idx = siblings.indexOf(entry.target);
+      const delay = siblings.length > 1 ? Math.min(idx * 90, 360) : 0;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+      fadeObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
 
   document.querySelectorAll(
-    '.card, .step, .blog-card, .pourqui-card, .testimonial, .section-header, .price-card'
+    '.card, .step, .blog-card, .pourqui-card, .testimonial, .section-header, .price-card, .seance-block, .freq-item, .permet-item, .fin-block, .method-block, .arbre-section, .distinction-card, .seance-detail-list'
   ).forEach(el => {
     el.classList.add('fade-in');
     fadeObserver.observe(el);
   });
 }
+
+// ── FAQ — transition hauteur fluide ────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(other => {
+      if (other !== btn) {
+        other.setAttribute('aria-expanded', 'false');
+        const a = other.nextElementSibling;
+        if (a) a.classList.remove('open');
+      }
+    });
+    btn.setAttribute('aria-expanded', !isOpen);
+    if (answer) answer.classList.toggle('open', !isOpen);
+  });
+});
+
+// ── SCROLL PROGRESS BAR ────────────────────────────────────────
+(function initScrollProgress() {
+  const bar = document.createElement('div');
+  bar.style.cssText = 'position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--violet-mid),var(--violet-light));z-index:200;transition:width .1s linear;pointer-events:none;';
+  document.body.appendChild(bar);
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+
+// ── COMPTEURS ANIMÉS ──────────────────────────────────────────
+(function initCounters() {
+  const counters = document.querySelectorAll('.count-up');
+  if (!counters.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target || el.textContent);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200;
+      const start = performance.now();
+      const update = now => {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+      obs.unobserve(el);
+    });
+  }, { threshold: .5 });
+  counters.forEach(el => {
+    el.dataset.target = parseFloat(el.textContent);
+    obs.observe(el);
+  });
+})();
 
 // ── CONTACT FORM (Formspree) ───────────────────────────────────
 const contactForm = document.getElementById('contact-form');

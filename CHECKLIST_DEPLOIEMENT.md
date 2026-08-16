@@ -1,6 +1,6 @@
 # Checklist complète de déploiement
-## Site Kristine Barthe — kristinebarthe.fr
-### Réalisé par CCFA · Version 1.0
+## Site Kristine Barthe — kristinebarthe-coaching.fr
+### Réalisé par MUSIVA · Version 1.0
 
 ---
 
@@ -28,7 +28,7 @@
 
 ### 2A — CALENDLY (prise de rendez-vous)
 - [ ] Créer un compte Calendly : https://calendly.com
-  - Email : kriss.barthe1560@gmail.com
+  - Email : contact@kristinebarthe-coaching.fr
   - Prénom Nom : Kristine Barthe
 - [ ] Créer un type d'événement :
   - Nom : "Séance de travail transgénérationnel"
@@ -41,13 +41,13 @@
 - [ ] Options visioconférence :
   - Activer l'intégration Zoom OU Google Meet dans Calendly
   - Pour les séances visio : Calendly enverra automatiquement le lien au client
-- [ ] Récupérer l'URL personnelle Calendly (format : https://calendly.com/kristine-barthe/seance)
-- [ ] **Remplacer dans tarifs.html** l'URL `https://calendly.com/kristine-barthe/seance` par l'URL réelle
+- [x] URL Calendly récupérée : https://calendly.com/kriss-barthe1560
+- [x] **URL réelle intégrée dans tarifs.html** : `https://calendly.com/kriss-barthe1560`
 - [ ] Tester une réservation de bout en bout
 
 ### 2B — FORMSPREE (formulaire de contact)
 - [ ] Créer un compte Formspree : https://formspree.io
-  - Email : kriss.barthe1560@gmail.com
+  - Email : contact@kristinebarthe-coaching.fr
 - [ ] Créer un nouveau formulaire
 - [ ] Récupérer l'endpoint (format : https://formspree.io/f/XXXXXXXXX)
 - [ ] **Remplacer dans contact.html** `https://formspree.io/f/XXXXX` par l'endpoint réel
@@ -56,7 +56,7 @@
 
 ### 2C — DOMAINE (OVH)
 - [ ] Vérifier la disponibilité sur https://www.ovhcloud.com/fr/domains/ :
-  - `kristinebarthe.fr` ← recommandé
+  - `kristinebarthe-coaching.fr` ← recommandé
   - `kristine-barthe.fr` (alternative)
   - `arbre-emotionnel-generations.fr` (angle SEO)
 - [ ] Commander le domaine
@@ -75,7 +75,7 @@
 ## PHASE 3 — DÉPLOIEMENT GITHUB
 
 ### 3A — Préparer le dépôt GitHub
-- [ ] Créer un compte GitHub (ou utiliser le compte CCFA)
+- [ ] Créer un compte GitHub (ou utiliser le compte MUSIVA)
 - [ ] Créer un nouveau dépôt : `kristine-barthe-site` (peut être privé)
 - [ ] Ouvrir un terminal dans le dossier `site/`
 - [ ] Initialiser et pousser :
@@ -125,8 +125,8 @@ git push -u origin main
 
 ### SEO et balisage
 - [ ] Tester les données structurées sur https://search.google.com/test/rich-results
-- [ ] Vérifier le sitemap sur https://kristinebarthe.fr/sitemap.xml
-- [ ] Vérifier robots.txt sur https://kristinebarthe.fr/robots.txt
+- [ ] Vérifier le sitemap sur https://kristinebarthe-coaching.fr/sitemap.xml
+- [ ] Vérifier robots.txt sur https://kristinebarthe-coaching.fr/robots.txt
 
 ### Fonctionnalités
 - [ ] Tester la réservation Calendly de bout en bout (créer et recevoir la confirmation)
@@ -151,15 +151,15 @@ git push -u origin main
   - Catégorie : "Thérapeute" ou "Praticienne en bien-être"
   - Adresse : Castelsarrasin (82)
   - Téléphone : 07 80 17 64 03
-  - Site web : https://kristinebarthe.fr
+  - Site web : https://kristinebarthe-coaching.fr
   - Horaires de travail
   - Photos (cabinet, portrait)
 - [ ] Soumettre la fiche à validation Google (carte postale ou téléphone)
 
 ### Google Search Console
 - [ ] Créer un compte Search Console : https://search.google.com/search-console
-- [ ] Ajouter et vérifier la propriété `kristinebarthe.fr`
-- [ ] Soumettre le sitemap : https://kristinebarthe.fr/sitemap.xml
+- [ ] Ajouter et vérifier la propriété `kristinebarthe-coaching.fr`
+- [ ] Soumettre le sitemap : https://kristinebarthe-coaching.fr/sitemap.xml
 - [ ] Surveiller les impressions et clics dans les 30 premiers jours
 
 ---
@@ -167,7 +167,7 @@ git push -u origin main
 ## PHASE 7 — SUIVI POST-LANCEMENT
 
 ### Semaine 1
-- [ ] Vérifier que le site est indexé (Google : `site:kristinebarthe.fr`)
+- [ ] Vérifier que le site est indexé (Google : `site:kristinebarthe-coaching.fr`)
 - [ ] Vérifier la réception des emails de formulaire et Calendly
 - [ ] Corriger les éventuels bugs signalés
 
@@ -188,15 +188,15 @@ git push -u origin main
 | Priorité | Action | Responsable |
 |---|---|---|
 | 🔴 BLOQUANT | Obtenir le SIREN | Kristine |
-| 🔴 BLOQUANT | Configurer Calendly + tester | CCFA + Kristine |
-| 🔴 BLOQUANT | Configurer Formspree | CCFA |
+| 🔴 BLOQUANT | Configurer Calendly + tester | MUSIVA + Kristine |
+| 🔴 BLOQUANT | Configurer Formspree | MUSIVA |
 | 🔴 BLOQUANT | Valider les textes juridiques par un juriste | Kristine |
-| 🔴 BLOQUANT | Commander le domaine kristinebarthe.fr | CCFA |
+| 🔴 BLOQUANT | Commander le domaine kristinebarthe-coaching.fr | MUSIVA |
 | 🟡 IMPORTANT | Vraie photo de Kristine | Kristine |
 | 🟡 IMPORTANT | Adresse complète du cabinet | Kristine |
 | 🟡 IMPORTANT | Témoignages avec accords écrits | Kristine |
-| 🟢 SOUHAITABLE | Google My Business | Kristine + CCFA |
-| 🟢 SOUHAITABLE | Search Console | CCFA |
+| 🟢 SOUHAITABLE | Google My Business | Kristine + MUSIVA |
+| 🟢 SOUHAITABLE | Search Console | MUSIVA |
 
 ---
 
@@ -210,4 +210,4 @@ Le site est d'ores et déjà configuré pour les séances en visio :
 
 ---
 
-*Checklist réalisée par CCFA — Dernière mise à jour : juin 2025*
+*Checklist réalisée par MUSIVA — Dernière mise à jour : juin 2025*
