@@ -269,14 +269,17 @@
     }
   }
   </script>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:#111;color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:0}:focus-visible{outline:3px solid #2563eb;outline-offset:2px}</style>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── HEADER ── -->
-<header class="site-header" role="banner">
+<header id="contenu" class="site-header" role="banner">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Kristine Barthe — Accueil">
-      <img src="assets/images/logo-kristine.png" alt="Kristine Barthe — Travail Transgénérationnel" class="logo__img" width="60" height="60">
+      <img src="assets/images/logo-kristine.png" alt="Kristine Barthe — Travail Transgénérationnel" class="logo__img" width="60" height="60" fetchpriority="high">
       <div><span class="logo__name">Kristine Barthe</span><span class="logo__sub">Travail Transgénérationnel</span></div>
     </a>
     <nav class="main-nav" aria-label="Navigation principale">
@@ -330,7 +333,7 @@
             <img src="assets/images/diplome-jade-colline.jpg"
                  alt="Diplôme de l'École Jade Colline — Kristine Barthe"
                  style="width:120px;height:auto;border-radius:var(--radius-sm);border:2px solid var(--lavande-mid);box-shadow:var(--shadow-sm);cursor:pointer;"
-                 title="Cliquer pour agrandir le diplôme">
+                 title="Cliquer pour agrandir le diplôme" loading="lazy" decoding="async" width="1456" height="1122">
             <span style="display:block;font-size:.75rem;color:var(--text-light);margin-top:.3rem;text-align:center;">Voir le diplôme</span>
           </a>
         </div>

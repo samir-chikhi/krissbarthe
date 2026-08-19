@@ -64,12 +64,15 @@
     ]
   }
   </script>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:#111;color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:0}:focus-visible{outline:3px solid #2563eb;outline-offset:2px}</style>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<header class="site-header" role="banner">
+<header id="contenu" class="site-header" role="banner">
   <div class="header-inner">
-    <a href="../index.html" class="logo"><img src="../assets/images/logo-kristine.png" alt="Kristine Barthe" class="logo__img" width="60" height="60"><div><span class="logo__name">Kristine Barthe</span><span class="logo__sub">Travail Transgénérationnel</span></div></a>
+    <a href="../index.html" class="logo"><img src="../assets/images/logo-kristine.png" alt="Kristine Barthe" class="logo__img" width="60" height="60" fetchpriority="high"><div><span class="logo__name">Kristine Barthe</span><span class="logo__sub">Travail Transgénérationnel</span></div></a>
     <nav class="main-nav">
       <a href="../pratique.html">La pratique</a>
       <a href="../pour-qui.html">Pour qui</a>
@@ -102,7 +105,7 @@
     </div>
 
     <div class="container">
-      <img src="../assets/images/blog-1.jpg" alt="Arbre généalogique symbolisant la transmission émotionnelle entre générations" class="article-hero-img" loading="eager">
+      <img src="../assets/images/blog-1.jpg" alt="Arbre généalogique symbolisant la transmission émotionnelle entre générations" class="article-hero-img" loading="eager" width="1200" height="630">
 
       <div class="article-body">
 
